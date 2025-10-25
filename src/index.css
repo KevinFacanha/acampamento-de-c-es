@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply font-poppins;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-baloo;
+  }
+}
+
+.swiper-pagination-bullet {
+  @apply bg-white opacity-50;
+}
+
+.swiper-pagination-bullet-active {
+  @apply bg-white opacity-100;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  @apply text-white;
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  @apply text-2xl;
+}
+
+.activities-swiper .swiper-button-next,
+.activities-swiper .swiper-button-prev {
+  @apply text-moss-green bg-white rounded-full w-12 h-12 shadow-lg;
+}
+
+.activities-swiper .swiper-button-next:after,
+.activities-swiper .swiper-button-prev:after {
+  @apply text-base;
+}
+
+.testimonials-swiper .swiper-pagination-bullet {
+  @apply bg-moss-green;
+}
+
+.testimonials-swiper .swiper-pagination-bullet-active {
+  @apply bg-mustard;
+}
