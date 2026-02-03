@@ -10,8 +10,8 @@ const MotivosSection = () => {
     },
     {
       icon: Trees,
-      title: 'Ambiente Natural e Seguro',
-      description: 'Espaço amplo e arborizado para seu cão brincar em contato com a natureza',
+      title: 'Ambiente Controlado e Seguro',
+      description: 'Ambiente amplo e organizado para seu cão se exercitar com segurança.Espaço amplo e arborizado para seu cão brincar em contato com a natureza',
     },
     {
       icon: Users,

@@ -6,9 +6,9 @@ const ServicesSection = () => {
   const services = [
     {
       icon: Baby,
-      title: 'Creche Canina',
+      title: 'Escola Canina',
       description:
-        'Seu cão passa o dia brincando, socializando e se divertindo em um ambiente supervisionado, com atividades recreativas e descanso programado.',
+        'Seu cão passa o dia aprendendo, socializando e se divertindo em um ambiente supervisionado, com atividades recreativas e descanso programado.',
       image:
         'https://res.cloudinary.com/dy36sfdb3/image/upload/v1761233660/WhatsApp_Image_2025-10-23_at_12.07.49_t7qrxo.jpg',
     },

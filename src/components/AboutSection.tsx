@@ -64,15 +64,25 @@ const AboutSection = () => {
             <h2 className="font-baloo text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-moss-green mb-4 sm:mb-6">
               Sobre o Tio Fabão
             </h2>
-            <p className="font-poppins text-base sm:text-lg text-gray-700 leading-relaxed mb-4 sm:mb-6">
-              Tio Fabão é adestrador profissional com mais de 10 anos de experiência no cuidado e treinamento de cães.
-              Apaixonado por animais desde criança, ele fundou o Acampamento de Cães com o objetivo de criar um
-              espaço onde os pets possam aprender, brincar e se desenvolver em um ambiente natural e seguro.
+            <p className="font-poppins text-base sm:text-lg text-gray-700 leading-relaxed mb-3 sm:mb-4">
+              Adestrador há 5 anos e com mais de 10 anos de experiência em recreação canina, o Tio Fabão é
+              apaixonado por animais desde a infância.
+            </p>
+            <p className="font-poppins text-base sm:text-lg text-gray-700 leading-relaxed mb-3 sm:mb-4">
+              Foi dessa paixão que nasceu o Acampamento de Cães — um espaço criado para que os pets possam
+              aprender, brincar e se desenvolver em um ambiente seguro, supervisionado e estruturado.
+            </p>
+            <p className="font-poppins text-base sm:text-lg text-gray-700 leading-relaxed mb-3 sm:mb-4">
+              Sua metodologia une técnicas modernas de adestramento misto com carinho, respeito e atenção
+              individual para cada cão.
+            </p>
+            <p className="font-poppins text-base sm:text-lg text-gray-700 leading-relaxed mb-3 sm:mb-4">
+              Aqui, cada peludo é tratado como parte da família, com cuidados personalizados e foco no equilíbrio
+              físico, mental e comportamental.
             </p>
             <p className="font-poppins text-base sm:text-lg text-gray-700 leading-relaxed mb-6 sm:mb-10">
-              Sua filosofia combina técnicas modernas de adestramento positivo com muito carinho e respeito por
-              cada animal. No acampamento, cada cão é tratado como parte da família, recebendo atenção
-              individualizada e cuidados personalizados.
+              Mais do que cuidar, nós educamos e transformamos comportamentos. Seu propósito é espalhar
+              conhecimento e ajudar o próximo. A mudança do seu cachorro começa através de você.
             </p>
 
             <motion.div

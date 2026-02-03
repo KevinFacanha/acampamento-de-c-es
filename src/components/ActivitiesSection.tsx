@@ -17,9 +17,9 @@ const ActivitiesSection = () => {
     },
     {
       icon: Waves,
-      title: 'Piscina Canina',
+      title: 'Intensivo',
       description:
-        'Diversão refrescante na piscina com supervisão. Ótimo exercício e perfeito para dias quentes.',
+        'Período de hospedagem com treinos diários focados em problemas graves e mudanças reais!',
       image: 'https://images.pexels.com/photos/8473523/pexels-photo-8473523.jpeg?auto=compress&cs=tinysrgb&w=800',
     },
     {
