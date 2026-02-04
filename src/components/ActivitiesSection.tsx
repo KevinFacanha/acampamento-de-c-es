@@ -13,14 +13,14 @@ const ActivitiesSection = () => {
       title: 'Brincadeiras e Socialização',
       description:
         'Interação diária com outros cães em grupos compatíveis, promovendo habilidades sociais e diversão.',
-      image: 'https://images.pexels.com/photos/2664417/pexels-photo-2664417.jpeg?auto=compress&cs=tinysrgb&w=800',
+      image: 'https://res.cloudinary.com/dy36sfdb3/image/upload/v1770195960/brincadeira_dxkjkb.jpg',
     },
     {
       icon: Waves,
       title: 'Intensivo',
       description:
         'Período de hospedagem com treinos diários focados em problemas graves e mudanças reais!',
-      image: 'https://images.pexels.com/photos/8473523/pexels-photo-8473523.jpeg?auto=compress&cs=tinysrgb&w=800',
+      image: 'https://res.cloudinary.com/dy36sfdb3/image/upload/v1770196058/intensivo_xiyf0a.jpg',
     },
     {
       icon: Zap,
@@ -34,8 +34,15 @@ const ActivitiesSection = () => {
       title: 'Treinamento em Grupo',
       description:
         'Sessões de adestramento coletivas que reforçam comandos e comportamentos positivos.',
-      image: 'https://images.pexels.com/photos/6578858/pexels-photo-6578858.jpeg?auto=compress&cs=tinysrgb&w=800',
+      image: 'https://res.cloudinary.com/dy36sfdb3/image/upload/v1770194950/treinamento_em_grupo_u75b7t.jpg',
     },
+    {
+      icon: Users,
+      title: 'Passeios',
+      description:
+        ' Passeios tende a ideia passeios individuais e em grupos para trabalhar a socialização em conjunto.',
+      image: 'https://res.cloudinary.com/dy36sfdb3/image/upload/v1761233257/WhatsApp_Image_2025-10-23_at_12.07.49_1_htnqhs.jpg',
+    }
   ];
 
   return (

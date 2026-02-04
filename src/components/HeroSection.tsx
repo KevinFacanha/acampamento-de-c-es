@@ -1,20 +1,9 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-scroll';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay, Pagination, EffectFade } from 'swiper/modules';
 import { Award } from 'lucide-react';
 
-import 'swiper/css';
-import 'swiper/css/pagination';
-import 'swiper/css/effect-fade';
-
 const HeroSection = () => {
-  const dogImages = [
-    'https://images.pexels.com/photos/1108099/pexels-photo-1108099.jpeg?auto=compress&cs=tinysrgb&w=1920',
-    'https://images.pexels.com/photos/1490908/pexels-photo-1490908.jpeg?auto=compress&cs=tinysrgb&w=1920',
-    'https://images.pexels.com/photos/825947/pexels-photo-825947.jpeg?auto=compress&cs=tinysrgb&w=1920',
-    'https://res.cloudinary.com/dy36sfdb3/image/upload/v1761233700/WhatsApp_Image_2025-10-23_at_12.07.55_eob8ng.jpg',
-  ];
+  const heroVideo = 'https://res.cloudinary.com/dy36sfdb3/video/upload/v1770195110/socializa%C3%A7%C3%A3o_tnedgv.mp4';
 
   return (
     <section
@@ -23,31 +12,14 @@ const HeroSection = () => {
     >
       <div className="absolute inset-0 bg-gradient-to-br from-moss-green via-moss-green to-mustard opacity-90 z-10"></div>
 
-      <Swiper
-        modules={[Autoplay, Pagination, EffectFade]}
-        effect="fade"
-        autoplay={{
-          delay: 5000,
-          disableOnInteraction: false,
-        }}
-        pagination={{
-          clickable: true,
-        }}
-        loop={true}
-        className="absolute inset-0"
-      >
-        {dogImages.map((img, index) => (
-          <SwiperSlide key={index}>
-            <div
-              className="w-full h-full bg-cover bg-center"
-              style={{
-                backgroundImage: `url(${img})`,
-                minHeight: '100vh',
-              }}
-            />
-          </SwiperSlide>
-        ))}
-      </Swiper>
+      <video
+        className="absolute inset-0 w-full h-full object-cover"
+        src={heroVideo}
+        autoPlay
+        muted
+        loop
+        playsInline
+      />
 
       <div className="container mx-auto px-4 lg:px-8 relative z-20 text-center text-white">
         <motion.div

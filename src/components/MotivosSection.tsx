@@ -16,7 +16,7 @@ const MotivosSection = () => {
     {
       icon: Users,
       title: 'Atividades e Socialização',
-      description: 'Brincadeiras em grupo, piscina e atividades diárias supervisionadas',
+      description: 'Oferecemos brincadeiras em grupo e atividades diárias supervisionadas.',
     },
     {
       icon: GraduationCap,

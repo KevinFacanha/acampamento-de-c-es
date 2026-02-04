@@ -143,11 +143,7 @@ const ContactSection = () => {
                   <MapPin className="w-6 h-6 flex-shrink-0 mt-1" />
                   <div>
                     <p className="font-poppins text-lg">
-                      Rua Guapiaçu, 278 - Vila Clementino
-                    </p>
-                    <p className="font-poppins text-white/80">
-                      São Paulo - SP, 04024-020
-
+                      Rua Guapiaçu - Vila Clementino, SP
                     </p>
                   </div>
                 </div>
@@ -199,7 +195,7 @@ const ContactSection = () => {
 
             <div className="rounded-2xl overflow-hidden h-64 shadow-2xl">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3654.815547003421!2d-46.64750868823101!3d-23.652597078254918!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5b359acdc2f1%3A0xfe8160b7991c3e3c!2sR.%20Guapia%C3%A7u%2C%20278%20-%20Vila%20Clementino%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2004024-020!5e0!3m2!1spt-BR!2sbr!4v1730528100000!5m2!1spt-BR!2sbr"
+                src="https://www.google.com/maps?q=Rua%20Guapia%C3%A7u%2C%20Vila%20Clementino%2C%20S%C3%A3o%20Paulo%20-%20SP&output=embed"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
