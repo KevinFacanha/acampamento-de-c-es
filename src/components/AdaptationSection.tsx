@@ -112,12 +112,13 @@ const AdaptationSection = () => {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-moss-green/50 to-transparent"></div>
             </div>
+            {/* Align badge within viewport on mobile to prevent overflow */}
             <motion.div
               initial={{ opacity: 0, scale: 0.8 }}
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6, delay: 0.3 }}
               viewport={{ once: true }}
-              className="absolute -bottom-6 -right-6 bg-white rounded-2xl p-6 shadow-xl max-w-xs"
+              className="absolute -bottom-6 right-0 lg:-right-6 bg-white rounded-2xl p-6 shadow-xl max-w-xs"
             >
               <p className="font-baloo text-2xl font-bold text-moss-green mb-2">
                 100% de aprovação

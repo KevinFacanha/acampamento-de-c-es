@@ -44,8 +44,9 @@ const AboutSection = () => {
             className="relative order-2 lg:order-1"
           >
             <div className="relative">
-              <div className="absolute -top-4 -left-4 sm:-top-6 sm:-left-6 w-24 h-24 sm:w-32 sm:h-32 bg-mustard rounded-full opacity-20"></div>
-              <div className="absolute -bottom-4 -right-4 sm:-bottom-6 sm:-right-6 w-28 h-28 sm:w-40 sm:h-40 bg-moss-green rounded-full opacity-20"></div>
+              {/* Keep decorative circles inside viewport on mobile to avoid horizontal scroll */}
+              <div className="absolute -top-4 left-0 sm:-top-6 sm:-left-6 w-24 h-24 sm:w-32 sm:h-32 bg-mustard rounded-full opacity-20"></div>
+              <div className="absolute -bottom-4 right-0 sm:-bottom-6 sm:-right-6 w-28 h-28 sm:w-40 sm:h-40 bg-moss-green rounded-full opacity-20"></div>
               <img
                 src="https://res.cloudinary.com/dy36sfdb3/image/upload/v1770194682/acampamento_de_caes_rtca9g.jpg"
                 alt="Tio Fabão com cão"

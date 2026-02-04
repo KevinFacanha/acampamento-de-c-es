@@ -7,12 +7,31 @@
     scroll-behavior: smooth;
   }
 
+  html,
+  body,
+  #root {
+    height: 100%;
+    overflow-x: hidden; /* prevent horizontal scroll on mobile */
+  }
+
   body {
     @apply font-poppins;
+    min-height: 100dvh;
+    overflow-x: hidden;
   }
 
   h1, h2, h3, h4, h5, h6 {
     @apply font-baloo;
+  }
+}
+
+@supports (height: 100dvh) {
+  .min-h-screen {
+    min-height: 100dvh;
+  }
+
+  .h-screen {
+    height: 100dvh;
   }
 }
 
