@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
-import { Link } from 'react-scroll';
 import { Menu, X } from 'lucide-react';
+import scrollToId from '../utils/scrollToId';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -24,6 +24,11 @@ const Navbar = () => {
     { to: 'contato', label: 'Contato' },
   ];
 
+  const handleNavClick = (targetId: string, closeMenu = false) => {
+    scrollToId(targetId);
+    if (closeMenu) setIsMobileMenuOpen(false);
+  };
+
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -43,11 +48,11 @@ const Navbar = () => {
             {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
           </button>
 
-          <Link
-            to="hero"
-            smooth={true}
-            duration={500}
-            className="flex items-center gap-2 cursor-pointer absolute left-1/2 transform -translate-x-1/2 md:static md:transform-none"
+          <button
+            type="button"
+            onClick={() => handleNavClick('hero')}
+            className="flex items-center gap-2 cursor-pointer absolute left-1/2 transform -translate-x-1/2 md:static md:transform-none bg-transparent border-0"
+            aria-label="Ir para o topo"
           >
             <img
               src="https://res.cloudinary.com/dy36sfdb3/image/upload/v1761244755/Adobe_Express_-_file_rzr0k1.png"
@@ -61,60 +66,50 @@ const Navbar = () => {
             >
               Tio Fabão
             </span>
-          </Link>
+          </button>
 
           <div className="hidden md:flex items-center gap-8 ml-auto">
             {navLinks.map((link) => (
-              <Link
+              <button
                 key={link.to}
-                to={link.to}
-                smooth={true}
-                duration={500}
-                offset={-80}
-                className={`font-poppins font-medium cursor-pointer transition-colors hover:text-mustard ${
+                type="button"
+                onClick={() => handleNavClick(link.to)}
+                className={`font-poppins font-medium cursor-pointer transition-colors hover:text-mustard bg-transparent border-0 ${
                   isScrolled ? 'text-gray-700' : 'text-white'
                 }`}
               >
                 {link.label}
-              </Link>
+              </button>
             ))}
-            <Link
-              to="contato"
-              smooth={true}
-              duration={500}
-              offset={-80}
+            <button
+              type="button"
+              onClick={() => handleNavClick('contato')}
               className="bg-mustard text-white px-6 py-2.5 rounded-full font-poppins font-semibold hover:bg-opacity-90 transition-all hover:scale-105 cursor-pointer"
             >
               Agende uma Visita
-            </Link>
+            </button>
           </div>
         </div>
 
         {isMobileMenuOpen && (
           <div className="md:hidden mt-4 pb-4 space-y-3 bg-white rounded-lg shadow-lg px-4 py-5">
             {navLinks.map((link) => (
-              <Link
+              <button
                 key={link.to}
-                to={link.to}
-                smooth={true}
-                duration={500}
-                offset={-80}
-                onClick={() => setIsMobileMenuOpen(false)}
-                className="block font-poppins font-medium text-gray-700 hover:text-mustard cursor-pointer py-2"
+                type="button"
+                onClick={() => handleNavClick(link.to, true)}
+                className="block w-full text-left font-poppins font-medium text-gray-700 hover:text-mustard cursor-pointer py-2 bg-transparent border-0"
               >
                 {link.label}
-              </Link>
+              </button>
             ))}
-            <Link
-              to="contato"
-              smooth={true}
-              duration={500}
-              offset={-80}
-              onClick={() => setIsMobileMenuOpen(false)}
-              className="block bg-mustard text-white px-6 py-2.5 rounded-full font-poppins font-semibold text-center cursor-pointer"
+            <button
+              type="button"
+              onClick={() => handleNavClick('contato', true)}
+              className="block w-full bg-mustard text-white px-6 py-2.5 rounded-full font-poppins font-semibold text-center cursor-pointer"
             >
               Agende uma Visita
-            </Link>
+            </button>
           </div>
         )}
       </div>

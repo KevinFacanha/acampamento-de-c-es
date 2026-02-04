@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
-import { Link } from 'react-scroll';
 import { Award } from 'lucide-react';
+import scrollToId from '../utils/scrollToId';
 
 const HeroSection = () => {
   const heroVideo = 'https://res.cloudinary.com/dy36sfdb3/video/upload/v1770195110/socializa%C3%A7%C3%A3o_tnedgv.mp4';
@@ -10,10 +10,11 @@ const HeroSection = () => {
       id="hero"
       className="relative min-h-screen flex items-center justify-center overflow-hidden"
     >
-      <div className="absolute inset-0 bg-gradient-to-br from-moss-green via-moss-green to-mustard opacity-90 z-10"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-moss-green via-moss-green to-mustard opacity-90 z-10 pointer-events-none"></div>
 
+      {/* Background-only: prevent blocking taps on mobile. */}
       <video
-        className="absolute inset-0 w-full h-full object-cover"
+        className="absolute inset-0 w-full h-full object-cover pointer-events-none"
         src={heroVideo}
         autoPlay
         muted
@@ -54,24 +55,20 @@ const HeroSection = () => {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="flex flex-col sm:flex-row gap-4 justify-center items-center"
           >
-            <Link
-              to="contato"
-              smooth={true}
-              duration={500}
-              offset={-80}
+            <button
+              type="button"
+              onClick={() => scrollToId('contato')}
               className="bg-mustard text-white px-8 py-4 rounded-full font-poppins font-semibold text-lg hover:bg-opacity-90 transition-all hover:scale-105 cursor-pointer shadow-xl"
             >
               Agende uma Visita
-            </Link>
-            <Link
-              to="servicos"
-              smooth={true}
-              duration={500}
-              offset={-80}
+            </button>
+            <button
+              type="button"
+              onClick={() => scrollToId('servicos')}
               className="bg-white/20 backdrop-blur-sm text-white px-8 py-4 rounded-full font-poppins font-semibold text-lg hover:bg-white/30 transition-all hover:scale-105 cursor-pointer border-2 border-white/50"
             >
               Conheça os Serviços
-            </Link>
+            </button>
           </motion.div>
         </motion.div>
       </div>

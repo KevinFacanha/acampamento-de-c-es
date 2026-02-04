@@ -1,5 +1,5 @@
 ﻿import { Instagram, Phone, Mail, ExternalLink } from 'lucide-react';
-import { Link } from 'react-scroll';
+import scrollToId from '../utils/scrollToId';
 
 const Footer = () => {
   return (
@@ -24,47 +24,40 @@ const Footer = () => {
             <h3 className="font-baloo text-xl font-bold mb-4">Links Rápidos</h3>
             <ul className="space-y-2 font-poppins">
               <li>
-                <Link
-                  to="hero"
-                  smooth={true}
-                  duration={500}
-                  className="text-white/80 hover:text-mustard transition-colors cursor-pointer"
+                <button
+                  type="button"
+                  onClick={() => scrollToId('hero')}
+                  className="text-white/80 hover:text-mustard transition-colors cursor-pointer bg-transparent border-0 p-0"
                 >
                   Início
-                </Link>
+                </button>
               </li>
               <li>
-                <Link
-                  to="servicos"
-                  smooth={true}
-                  duration={500}
-                  offset={-80}
-                  className="text-white/80 hover:text-mustard transition-colors cursor-pointer"
+                <button
+                  type="button"
+                  onClick={() => scrollToId('servicos')}
+                  className="text-white/80 hover:text-mustard transition-colors cursor-pointer bg-transparent border-0 p-0"
                 >
                   Serviços
-                </Link>
+                </button>
               </li>
               <li>
-                <Link
-                  to="sobre"
-                  smooth={true}
-                  duration={500}
-                  offset={-80}
-                  className="text-white/80 hover:text-mustard transition-colors cursor-pointer"
+                <button
+                  type="button"
+                  onClick={() => scrollToId('sobre')}
+                  className="text-white/80 hover:text-mustard transition-colors cursor-pointer bg-transparent border-0 p-0"
                 >
                   Sobre Nós
-                </Link>
+                </button>
               </li>
               <li>
-                <Link
-                  to="contato"
-                  smooth={true}
-                  duration={500}
-                  offset={-80}
-                  className="text-white/80 hover:text-mustard transition-colors cursor-pointer"
+                <button
+                  type="button"
+                  onClick={() => scrollToId('contato')}
+                  className="text-white/80 hover:text-mustard transition-colors cursor-pointer bg-transparent border-0 p-0"
                 >
                   Contato
-                </Link>
+                </button>
               </li>
             </ul>
           </div>

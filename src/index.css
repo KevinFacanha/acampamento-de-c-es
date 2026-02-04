@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 @layer base {
-  * {
+  html {
     scroll-behavior: smooth;
   }
 
@@ -23,6 +23,21 @@
   h1, h2, h3, h4, h5, h6 {
     @apply font-baloo;
   }
+}
+
+:root {
+  --scroll-offset: 6.5rem;
+}
+
+@media (min-width: 768px) {
+  :root {
+    --scroll-offset: 5rem;
+  }
+}
+
+section[id] {
+  /* Offset fixed header when scrolling to anchors */
+  scroll-margin-top: calc(var(--scroll-offset) + env(safe-area-inset-top));
 }
 
 @supports (height: 100dvh) {

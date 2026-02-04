@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { Home, Baby, Target } from 'lucide-react';
-import { Link } from 'react-scroll';
+import scrollToId from '../utils/scrollToId';
 
 const ServicesSection = () => {
   const services = [
@@ -101,15 +101,13 @@ const ServicesSection = () => {
                 <p className="font-poppins text-gray-600 mb-5 leading-relaxed">
                   {service.description}
                 </p>
-                <Link
-                  to="contato"
-                  smooth={true}
-                  duration={500}
-                  offset={-80}
+                <button
+                  type="button"
+                  onClick={() => scrollToId('contato')}
                   className="inline-block bg-mustard text-white px-6 py-2.5 rounded-full font-poppins font-semibold hover:bg-opacity-90 transition-all cursor-pointer"
                 >
                   Saiba Mais
-                </Link>
+                </button>
               </div>
             </motion.div>
           ))}
